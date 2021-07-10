@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
-const CardResumeItens = () => {
+const CardResumeItens: Function = () => {
   const router = useRouter();
 
   let dados = [

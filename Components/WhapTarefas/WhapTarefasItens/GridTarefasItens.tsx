@@ -2,7 +2,7 @@ import { Wrap, WrapItem, Box, Center, Heading, Text } from "@chakra-ui/react";
 import CardResumeItens from "../../CardResume/CardResumeItens/CardResumeItens";
 import { useRouter } from "next/router";
 
-const GridTarefasItens = () => {
+const GridTarefasItens: Function = () => {
   const router = useRouter();
 
   let dados = [

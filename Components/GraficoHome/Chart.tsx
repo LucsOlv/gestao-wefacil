@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function Chart({ title, data, dataKey, grid }) {
+export default function Chart({ title, data, dataKey, grid }: any) {
   return (
     <Box backgroundColor="#fff">
       <h3 className="chartTitle">{title}</h3>

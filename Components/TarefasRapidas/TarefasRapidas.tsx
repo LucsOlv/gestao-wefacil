@@ -1,8 +1,9 @@
 import { Box, Checkbox, Divider, Stack } from "@chakra-ui/react";
-import { useState } from "react";
+import { jsx } from "@emotion/react";
+import React, { ReactElement, useState } from "react";
 import TarefasRapidasItens from "./TarefasRapidasItens/TarefasRapidasItens";
 
-const TarefasRapidas = () => {
+const TarefasRapidas:Function = ():JSX.Element[] => {
   const [checkedItems, setCheckedItems] = useState([false, false]);
 
   const allChecked = checkedItems.every(Boolean);
@@ -34,20 +35,24 @@ const TarefasRapidas = () => {
 
   return dados.map((m, index) => {
     return (
-      <Box backgroundColor="#fff" margin="5" key={index}>
-        <Checkbox
-          isChecked={m.isCheck}
-          isIndeterminate={isIndeterminate}
-          onChange={e => setCheckedItems([e.target.checked, e.target.checked])}
-        >
-          {m.Descricao}
-        </Checkbox>
-        <TarefasRapidasItens
-          SubTarefas={m.SubTarefas}
-          TrocarMarcacao={TrocarMarcacao}
-        />
-        <Divider />
-      </Box>
+      <>
+        <Box backgroundColor="#fff" margin="5" key={index}>
+          <Checkbox
+            isChecked={m.isCheck}
+            isIndeterminate={isIndeterminate}
+            onChange={e =>
+              setCheckedItems([e.target.checked, e.target.checked])
+            }
+          >
+            {m.Descricao}
+          </Checkbox>
+          <TarefasRapidasItens
+            SubTarefas={m.SubTarefas}
+            TrocarMarcacao={TrocarMarcacao}
+          />
+          <Divider />
+        </Box>
+      </>
     );
   });
 };

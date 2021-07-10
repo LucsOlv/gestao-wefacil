@@ -1,8 +1,8 @@
 import { Box, Checkbox, Stack } from "@chakra-ui/react";
 import { useState } from "react";
 
-const TarefasRapidasItens = ({ SubTarefas, TrocarMarcacao }) => {
-  return SubTarefas.map((m, index) => {
+const TarefasRapidasItens = ({ SubTarefas, TrocarMarcacao }: any) => {
+  return SubTarefas.map((m: any, index: number) => {
     return (
       <Box key={index}>
         <Stack pl={6} mt={1} spacing={1}>

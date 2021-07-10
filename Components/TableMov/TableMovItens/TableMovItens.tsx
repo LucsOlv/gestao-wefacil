@@ -9,7 +9,7 @@ import {
   TableCaption,
 } from "@chakra-ui/react";
 
-const TableMovItens = () => {
+const TableMovItens: Function = () => {
   const dados = [
     {
       id: 1,
